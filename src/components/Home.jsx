@@ -17,7 +17,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(fetchApiData())
-    },[])
+    },[fetchApiData])
 
   return (
     <>
