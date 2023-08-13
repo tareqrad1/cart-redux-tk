@@ -30,7 +30,7 @@ const Home = () => {
                         })
                 )}
                 {value.error && <h1>{value.error}</h1>}
-                {value.data && !value.data.length && !value.loading && !value.error && (<h1 className="text-center mt-5">No Have Data Now</h1>)}
+                {/* {value.data && !value.data.length && !value.loading && !value.error && (<h1 className="text-center mt-5">No Have Data Now</h1>)} */}
             </div>
         </Container>
     </>
