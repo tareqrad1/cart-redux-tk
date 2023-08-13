@@ -10,14 +10,9 @@ const Home = () => {
     const value = useSelector((state) => state.products);
     console.log(value.loading); // value.loading - data - error
 
-    // useEffect(() => (async() => {
-    //     const products = await fetchApiData() //return products and add to dispatch
-    //     dispatch(products);
-    // }),[fetchApiData]);
-
     useEffect(() => {
         dispatch(fetchApiData())
-    },[fetchApiData])
+    },[fetchApiData]);
 
   return (
     <>
@@ -34,7 +29,6 @@ const Home = () => {
                         })
                 )}
                 {value.error && <h1>{value.error}</h1>}
-                {value.data && !value.data.length && !value.loading && !value.error && (<h1 className="text-center mt-5">No Have Data Now</h1>)}
             </div>
         </Container>
     </>
