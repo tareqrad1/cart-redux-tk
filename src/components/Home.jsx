@@ -10,10 +10,14 @@ const Home = () => {
     const value = useSelector((state) => state.products);
     console.log(value.loading); // value.loading - data - error
 
-    useEffect(() => (async() => {
-        const products = await fetchApiData() //return products and add to dispatch
-        dispatch(products);
-    }),[fetchApiData]);
+    // useEffect(() => (async() => {
+    //     const products = await fetchApiData() //return products and add to dispatch
+    //     dispatch(products);
+    // }),[fetchApiData]);
+
+    useEffect(() => {
+        dispatch(fetchApiData())
+    },[])
 
   return (
     <>
