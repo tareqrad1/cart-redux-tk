@@ -36,6 +36,7 @@ function Cart() {
                 <td className='text-danger'>{(ele.price * ele.quantity).toFixed(2)}$</td>
                 <td>{ele.quantity } <button onClick={() => dispatch(addToCart(ele))}>+</button> <button onClick={() => dispatch(decrement(ele))}>-</button> </td>
                 <td><Button className='bg-danger ' onClick={() => dispatch(removeFromCart(ele.id))}>remove</Button></td>
+                <td><Button className='bg-danger ' onClick={() => dispatch(removeFromCart(ele.id))}>remove</Button></td>
               </tr>
             ))}
         </tbody>
