@@ -16,7 +16,7 @@ const Cards = ({ele}) => {
         <Card.Text className='text-danger'>
           {ele.price}$
         </Card.Text>
-        <Button  variant="primary" onClick={() => dispatch(addToCart(ele))}>add to cart</Button>
+        <Button variant="primary" onClick={() => dispatch(addToCart(ele))}>add to cart</Button>   {/* ele that action.payload */}
       </Card.Body>
     </Card>
   )
